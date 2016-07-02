@@ -1,0 +1,11 @@
+<h1>Demo#index</h1>
+<p>Hello from index!:)</p>
+<a href="/demo/hello">Hello Page</a> <br/>
+<%= link_to("Hello Page 2",{:action=> 'hello'})%><br/>
+<%= link_to("Hello Page 2 with params",{:action=> 'hello', :id => 4, :page => 12})%>
+
+<br/>
+<%name = "Kevin"%>
+<%name = "Sorry!'); alert('I hacked you!"%>
+<%= link_to('Roar','#', :onclick => "jsRoar('#{j(name)}'); return true;")%>
+<%= javascript_tag("jsRoar('#{j(name)}');") %>

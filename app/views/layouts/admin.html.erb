@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SimpleCms | <%=@page_title || "Admin"%></title>
+		<%= stylesheet_link_tag('application', :media => 'all')%>
+		<style>
+			span.status {display: block; width: 10px;height: 10px;
+				margin: .25em auto; padding: 0; border: 1px solid #000000;}
+				span.status.true {background: green; color: green;}
+				span.status.false{
+					background: red;
+					color: red;
+				}
+		</style>
+	</head>
+	<body>
+		<div id = "header">
+			<h1>Simple CMS Admin</h1>
+		</div>
+		<div id="main">
+			<%if !flash[:notice].blank?%>
+				<div class="notice">
+					<%= flash[:notice]%>
+				</div>
+			<%end %>
+			<div id="content">
+				<!-- before yield -->
+				<%= yield %>
+				<!-- after yield -->
+			</div>
+		</div>
+		<div id="footer">
+			<p id="copyright"> &copy; Stephen S. Lee</p>
+		</div>
+	</body>
+</html>

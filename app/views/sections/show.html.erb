@@ -1,0 +1,31 @@
+<%@page_title = @section.name%>
+
+<%= link_to("<< Back", {:controller => 'sections', :page_id => @section.page_id}, :class => 'back-link') %>
+<div class="sections show">
+	<h2>Show section</h2>
+	<table summary="Section detail view">
+		<tr>
+			
+			<th>Name</th>
+			<td><%= @section.name%></td>
+		</tr>
+		<tr>
+			<th>Position</th>
+			<td><%= @section.position%></td>
+		</tr>
+		<tr>
+			<th>Visible?</th>
+			<td><%= @section.visible ? 'True':'False' %></td>
+		</tr>
+		<tr>
+			<th>Created At</th>
+			<td><%= @section.created_at%></td>
+		</tr>
+		<tr>
+			<th>Updated At</th>
+			<td><%= @section.updated_at%></td>
+		</tr>
+		
+
+	</table>
+</div>
